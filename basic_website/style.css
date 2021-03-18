@@ -1,11 +1,19 @@
 body{
-    background-color: deeppink;
+    background-color: brown;
     
+}
+.container{
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+font-size:18px;
+}
+.castle,.district,.city img{
+    padding-top: 35px;
 }
 .header .main{
 width: 100%;
 margin:20px;
-font-size: 1em;
+font-size: 2.5em;
 }
 .header .img1{
     width:100%;
@@ -34,10 +42,12 @@ padding-top: 20px;
 }
 .place1, .place2,.place3{
     display:flex;
-    width: 100%;
 }
 .facts h4{
     padding-left: 1em;
+}
+.Histo h4{
+    font-size: 20px;
 }
 @media(min-width:800px){
   .city-name img{
@@ -49,9 +59,11 @@ padding-top: 20px;
     }
     .foreignL{
         clear: both;
+    padding-top: 20px;
     }
     .table{
         padding-top: 2px;
+        
     }
     .heading h3{
         text-decoration: underline;
