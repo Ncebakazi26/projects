@@ -9,13 +9,14 @@
 
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0;
   font-size: 100%;
+  background-color: cadetblue;
 }
 
 /* ROOT FONT STYLES */
@@ -181,17 +182,40 @@ p {
 .hidden-sm {
   display: none;
 }
-table,th,td{
+th,td{
 border: solid;
-    border-collapse: collapse; 
+border-collapse: collapse; 
+width:50%;
+}
+table{
+border-collapse: collapse;
+width: 100%;  
+}
+/*.historical p{
+  line-height: 0.9em;
+}*/
+/* .historical img{
+  padding-top:90px;
+} */
+.city img{
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 25px;
+}
+.city p{
+  margin: -10px;
+}
+@media(max-width:540px){
+  /* .historical img{
+    width: 50%;
+    float: left;
+
+  } */
+  .histo p{
     width:50%;
+  }
 }
-.text1,.text2,.text3{
-  line-height: 0.5;
-}
-.text2{
-  
-}
+
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
     width: 80%;
@@ -257,4 +281,8 @@ border: solid;
     width: 75%;
     max-width: 60rem;
   }
+}
+
+.myimg {
+  float: right;
 }
