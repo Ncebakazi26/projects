@@ -27,6 +27,9 @@ font-size: 2.5em;
 .heading h3{
     text-decoration: underline;
 }
+.heading p{
+    margin: 15px;
+}
 .city-name img{
     margin:10px
 }
@@ -39,27 +42,49 @@ table {
     width: 100%; 
     border-collapse: collapse;
 }
-
+.castle{
+margin:-20px;  
+padding-left: 40px;  
+}
 .city img,.district,.castle{
     padding-top: 100px;
 }
-.castle,.facts,.cityhall,.city img{
+/*.castle,.facts,.cityhall,.city img{
 padding-left:20px ;    
 }
+*/
 .facts,.cityhall{
     padding-top:20px ;
 }
 .section p{
     margin: -20px;
 }
-.place1{
+/*.place1{
 padding-left: 20px;    
 }
+*/
 .place1, .place2,.place3{
     display:flex;
 }
 .facts h4{
     padding-left: 1em;
+    padding-top:-60px;
+}
+.facts p{
+    padding-left:60px;
+    margin: -16px;
+}
+.district{
+    padding-left: 40px;
+    margin: -16px;
+}
+.cityhall{
+margin:-16px ;  
+padding-left: 60px;  
+}
+.city img{
+    margin: -17px;
+    padding-left:40px ;
 }
 .Histo h4{
     font-size: 20px;
@@ -92,9 +117,6 @@ padding-left: 20px;
     .Histo{
     display: flex;
     justify-content: space-between;
-    }
-    .district{
-        padding-left: 10px;
     }
     .district{
         order:4;
