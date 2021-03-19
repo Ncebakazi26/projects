@@ -6,9 +6,13 @@ body{
 font-weight: bold;
 font-family: Arial, Helvetica, sans-serif;
 font-size:18px;
+margin: 20px;
 }
-.castle,.district,.city img{
-    padding-top: 35px;
+/* .castle,.district,.city img{
+    padding-top: 20px
+} */
+.foreignL{
+ padding-top: 20px;   
 }
 .header .main{
 width: 100%;
@@ -18,27 +22,38 @@ font-size: 2.5em;
 .header .img1{
     width:100%;
     margin:20px;
-
-}
-.header{
-   display: flex;
+    clear: both;
 }
 .heading h3{
     text-decoration: underline;
 }
 .city-name img{
-    margin:10px;
-    width:100%;
+    margin:10px
 }
-table, th, td{
+th,td{
     border: solid;
     border-collapse: collapse; 
-    width:50%;  
+    width: 50%; 
 }
-.table{
-width: 100%;
-padding-bottom: 20px;
-padding-top: 20px;
+table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+.city img,.district,.castle{
+    padding-top: 100px;
+}
+.castle,.facts,.cityhall,.city img{
+padding-left:20px ;    
+}
+.facts,.cityhall{
+    padding-top:20px ;
+}
+.section p{
+    margin: -20px;
+}
+.place1{
+padding-left: 20px;    
 }
 .place1, .place2,.place3{
     display:flex;
@@ -58,16 +73,19 @@ padding-top: 20px;
       width:50%;
     }
     .foreignL{
-        clear: both;
+    clear: both;
     padding-top: 20px;
     }
-    .table{
+    .header{
+        display: flex;
+    }
+   /* .table{
         padding-top: 2px;
         
     }
     .heading h3{
         text-decoration: underline;
-    }
+    }*/
     
 }
 @media(min-width:800px){
