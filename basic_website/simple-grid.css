@@ -294,7 +294,7 @@ padding-left: 10px;
   padding-top: 80px;
 }
 
-@media(max-width:600px){
+@media(max-width:800px){
   .myimg2{
     float:left;
     padding-right: 10px;
