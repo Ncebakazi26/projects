@@ -1,7 +1,3 @@
 function isWeekday (weeks){
-    if(weeks==="Monday"){
-      return true
-    }else{
-    return false
-    }
-    }
+  return(weeks ==("Monday"||"Tuesday"||"Wednesday"||"Thursday"||"Friday"))  
+  }
