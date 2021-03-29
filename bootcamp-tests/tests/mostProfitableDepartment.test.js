@@ -1,5 +1,5 @@
 describe('The mostProfitableDepartment function', function () {
-    it('should check which department makes more profit and returns outdoor as the most profitable department', function () {
+    it('should return outdoor as the most profitable department', function () {
         assert.deepEqual(mostProfitableDepartment([{ department: 'hardware', sales: 4500, day: 'Monday' },
         { department: 'outdoor', sales: 1500, day: 'Monday' },
         { department: 'carpentry', sales: 5500, day: 'Monday' },
@@ -16,7 +16,7 @@ describe('The mostProfitableDepartment function', function () {
         { department: 'outdoor', sales: 12006, day: 'Friday' },
         { department: 'carpentry', sales: 16109, day: 'Friday' }]), 'outdoor');
     });
-    it('should check which department makes more profit and returns carpentry as the most profitable department', function () {
+    it('should return carpentry as the most profitabe department', function () {
         assert.deepEqual(mostProfitableDepartment([{ department: 'hardware', sales: 4500, day: 'Monday' },
         { department: 'outdoor', sales: 1500, day: 'Monday' },
         { department: 'carpentry', sales: 5500, day: 'Monday' },

@@ -1,11 +1,11 @@
 describe('The price of the shift function(transportFee())', function () {
-    it('should check if its Morning shift it should return R20', function () {
+    it('should should return R20 if its Morning shift', function () {
       assert.equal('R20', transportFee('morning shift'))
     });
-    it('Should check  if its Afternoon shift it should return R10' , function () {
+    it('Shouldreturn R10 if its Afternoon shift  ' , function () {
       assert.equal('R10', transportFee('afternoon shift'))
     });
-    it('Should check  if its Night shift it should return free because the is no price for night shift ', function () {
+    it('Shouldreturn free because there is no price for night shift ', function () {
       assert.equal('free', transportFee('night shift'))
     });
   });

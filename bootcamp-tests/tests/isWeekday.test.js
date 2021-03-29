@@ -1,11 +1,11 @@
 describe('The day of the week function(isWeekday())', function () {
-    it('should check if Monday is a day of the week and return true', function () {
+    it('should return true if Monday is a day of the week ', function () {
         assert.equal(true, isWeekday('Monday'))
     });
-    it('Should check if Tuesday is a day of the week and return true', function () {
+    it('Should return true if Tuesday is a day of the week ', function () {
         assert.equal(true, isWeekday('Tuesday'))
     });
-    it('Should check if Saturday is a day of the week, if not it should return false', function () {
+    it('Should should return false if Saturday is not  a day of the week ', function () {
         assert.equal(false, isWeekday('Saturday'))
     });
 });

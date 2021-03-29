@@ -1,11 +1,11 @@
 describe('The registration number function(isFromBellville())', function () {
-  it('should check if the registration number is from Bellville and returns true', function () {
+  it('should returns true for the registration number that is from Bellville', function () {
     assert.equal(true, isFromBellville('CY 874324'))
   });
-  it('Should check if the registration number is from Bellville and returns true', function () {
+  it('Should return true for the registration number that is from Bellville a', function () {
     assert.equal(true, isFromBellville('CY 872443'))
   });
-  it('Should check if the registration number is from Bellville, if not it must return false', function () {
+  it('Should return false because there is no registration number from Bellville', function () {
     assert.equal(false, isFromBellville('CJ 98912'))
   });
 });
