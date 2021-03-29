@@ -1,11 +1,12 @@
-describe('The town that a registration number belongs to function', function () {
-    it('should check which town is the registration number from and return the towns name', function () {
-      assert.equal('Bellville', findItemsOver20('CY 523519'))
+describe('The over 20 quantity items function(findItemsOver20())', function () {
+    it('should check for the product that have a quantity value that is higher than 20 and return quantity value for pears and bananas ', function () {
+      assert.deepEqual(findItemsOver20([{'name':'apples', qty:13},{'name':'pears', qty:37},{'name':'bananas',qty:27}]),[{'name':'pears',qty:37},{'name':'bananas',qty:27}])
     });
-    it('Should check which town is the registration number from and return the towns name' , function () {
-      assert.equal('Cape Town', f('CA 182736'))
+    it('should check for the product that have a quantity value that is higher than 20 and return quantity value of bananas', function () {
+      assert.deepEqual(findItemsOver20([{'name':'apples', qty:13},{'name':'bananas',qty:27}]),[{'name':'bananas',qty:27}])
     });
-    it('Should check which town is the registration number from and return the towns name' , function () {
-        assert.equal('Paarl', fromWhere('CJ 182736'))
-      });
+    it('should check for the product that have a quantity value that is higher than 20 and if it does not find it ,it should return an empty array', function () {
+      assert.deepEqual(findItemsOver20([{'name':'apples', qty:13}]),[])
+    });
   });
+    

@@ -1,13 +1,14 @@
-function totalPhoneBill(callsAndSms){
+function totalPhoneBill(billString){
     //console.log(callsAndSms);
-  var string=callsAndSms.split(", ")
+  var billList= billString.split(",")
   var total=0;
   //var phonebill=[];
-    for(var i=0;i<string.length;i++){
-      if(string[i] ==="call"){
+    for(var i=0;i<billList.length;i++){
+    var dataType =  billList[i].trim()
+      if( dataType==="call"){
       total += 2.75;
       }
-       if(string[i] ==="sms"){
+       if(dataType ==="sms"){
       total += 0.65;
       }
   }
