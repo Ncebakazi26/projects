@@ -40,4 +40,24 @@ describe("The text bill factory function", function () {
         assert.equal(14, textBill.getTotal());
         assert.equal("Orange", textBill.OrangeAndRed());
     });
+    it("should return red if the total is 20 and over", function () {
+        let textBill = TextBill();
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("call")
+        textBill.smsAndcalls("call")
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("call")
+        textBill.smsAndcalls("call")
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("sms")
+        textBill.smsAndcalls("call")
+        textBill.smsAndcalls("call")
+
+        assert.equal(16.5, textBill.getcallTotal());
+        assert.equal(4.5, textBill.getsmsTotal());
+        assert.equal(21, textBill.getTotal());
+        assert.equal("Red", textBill.OrangeAndRed());
+    });
 });

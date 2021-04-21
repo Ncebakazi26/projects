@@ -20,10 +20,19 @@ function RadioBill(){
           return  callsTotal+smsTotal;
 
         }
+        function OrangeAndRed1(){
+            if(getTotal1()>=5){
+                return "Orange";
+            }
+            if(getTotal1()>=10){
+                return "Red";
+            }
+             }
     return{
         smsAndcalls1,
         getcallTotal1,
         getsmsTotal1,
         getTotal1,
+        OrangeAndRed1,
     }
 }

@@ -20,8 +20,40 @@ describe("The radio bill factory function", function () {
         textBill.smsAndcalls1("call")
         textBill.smsAndcalls1("call")
 
-        assert.equal(2.75, textBill.getcallTotal1());
+        assert.equal(5.5, textBill.getcallTotal1());
         assert.equal(1.5, textBill.getsmsTotal1());
         assert.equal(7, textBill.getTotal1());
+    });
+    it("should return orange if the total is 5 and over", function () {
+        let textBill = RadioBill();
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("call")
+        textBill.smsAndcalls1("call")
+    
+    
+
+        assert.equal(5.5, textBill.getcallTotal1());
+        assert.equal(1.5, textBill.getsmsTotal1());
+        assert.equal(7, textBill.getTotal1());
+        assert.equal("Orange", textBill.OrangeAndRed1());
+    });
+    it("should return red if the total is 10 and over", function () {
+        let textBill = RadioBill();
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("sms")
+        textBill.smsAndcalls1("call")
+        textBill.smsAndcalls1("call")
+        textBill.smsAndcalls1("call")
+        
+    
+    
+
+        assert.equal(8.25, textBill.getcallTotal1());
+        assert.equal(3, textBill.getsmsTotal1());
+        assert.equal(11.25, textBill.getTotal1());
+        assert.equal("Red", textBill.OrangeAndRed1());
     });
 });
