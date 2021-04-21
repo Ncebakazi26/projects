@@ -20,10 +20,10 @@ function TextBill(){
           return  callsTotal+smsTotal;
         }
         function OrangeAndRed(){
-            if(getTotal()>=10){
+            if(getTotal()>=30 && getTotal() < 50){
                 return "Orange";
             }
-            if(getTotal()>=20){
+            if(getTotal()>=50){
                 return "Red";
             }
              }

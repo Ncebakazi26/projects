@@ -3,22 +3,32 @@ function calculateBill(){
     var billTotal = 0;
 function calculateCallandSms(stringPassed){
     var billString = stringPassed.split(",");
-    var billItems = billString
-    for (var i=0;i<billItems.length;i++){
-        var billItem = billItems[i].trim();
+    for (var i=0;i<billString.length;i++){
+        var billItem = billString[i].trim();
         if (billItem === "call"){
             billTotal += 2.75;
         }
         else if (billItem === "sms"){
             billTotal += 0.75;
         }
-        function getTotalcalcalculated(){
-            return billTotal;
-        }
+       
     }
 }
+    function getTotalcalcalculated(){
+        return billTotal;
+    }
+    function showColor(){
+        if(getTotalcalcalculated()>=20 && getTotalcalcalculated() < 30){
+            return "Orange";
+        }
+        if(getTotalcalcalculated()>=30){
+            return "Red";
+        }
+
+    }
 return{
     calculateCallandSms,
     getTotalcalcalculated,
+    showColor,
 }
 }
