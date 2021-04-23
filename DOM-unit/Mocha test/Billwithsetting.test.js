@@ -2,7 +2,7 @@ describe("The bill with setting factory function", function () {
     describe("set values", function () {
     it("should be able to set the call cost ", function () {
         let settingsBill = BillWithSettings();
-        settingsBill.setCritical(10);
+        settingsBill.setCritical(12);
         settingsBill.setCallCost(2.75);
         assert.equal(settingsBill.getCallCost(), 2.75);
 
@@ -183,9 +183,13 @@ describe("The warning and critical level function", function () {
         let settingsBill = BillWithSettings();
         settingsBill.setCallCost(2.50)
         settingsBill.setSmsCost(0.75)
-        settingsBill.setCritical(10)
+        settingsBill.setCritical(15)
 
         
+        settingsBill.makeCall();
+        settingsBill.makeCall();
+        settingsBill.makeCall();
+        settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
@@ -197,7 +201,7 @@ describe("The warning and critical level function", function () {
         let settingsBill = BillWithSettings();
         settingsBill.setCallCost(2.50)
         settingsBill.setSmsCost(0.75)
-        settingsBill.setCritical(10)
+        settingsBill.setCritical(15)
 
         
         settingsBill.makeCall();
@@ -205,16 +209,20 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
+        settingsBill.makeCall();
+        settingsBill.makeCall();
+        settingsBill.makeCall();
+        settingsBill.makeCall();
         assert.equal(settingsBill.classColor(),"danger");
-        assert.equal(settingsBill.getTotalCallCost(),10);
+        assert.equal(settingsBill.getTotalCallCost(),15);
 
     });
     it("should allow total to increase again after upping the critical level", function () {  
         let settingsBill = BillWithSettings();
-        settingsBill.setCallCost(2.50)
-        settingsBill.setSmsCost(0.75)
-        settingsBill.setCritical(10)
-        settingsBill.setWarning(8)
+        settingsBill.setCallCost(5.50)
+        settingsBill.setSmsCost(1.75)
+        settingsBill.setCritical(25)
+        settingsBill.setWarning(20)
 
         
         settingsBill.makeCall();
@@ -223,13 +231,13 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         assert.equal(settingsBill.classColor(),"danger");
-        assert.equal(settingsBill.getTotalCallCost(),10);
+        assert.equal(settingsBill.getTotalCallCost(),27.5);
 
-        settingsBill.setCritical(20)
+        settingsBill.setCritical(50)
         assert.equal(settingsBill.classColor(),"warning");
         settingsBill.makeCall();
         settingsBill.makeCall();
-        assert.equal(settingsBill.getTotalCallCost(),15);
+        assert.equal(settingsBill.getTotalCallCost(),38.5);
 
 
 
