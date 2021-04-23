@@ -165,7 +165,7 @@ it("should be able to send 4 sms at 0.25 and make 4 call at 2.75", function () {
 }); 
 }); 
 describe("The warning and critical level function", function () {
-    it("should return color orange if the warning level is reached", function () {  
+    it("should return class name warning if the warning level is reached", function () {  
         let settingsBill = BillWithSettings();
         settingsBill.setCallCost(1.35)
         settingsBill.setSmsCost(0.85)
@@ -176,10 +176,10 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
-        assert.equal(settingsBill.classColor(),"orange");
+        assert.equal(settingsBill.classColor(),"warning");
 
     });
-    it("should return color red if the critical level is reached", function () {  
+    it("should return class name critical if the critical level is reached", function () {  
         let settingsBill = BillWithSettings();
         settingsBill.setCallCost(2.50)
         settingsBill.setSmsCost(0.75)
@@ -190,7 +190,7 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
-        assert.equal(settingsBill.classColor(),"red");
+        assert.equal(settingsBill.classColor(),"danger");
 
     });
     it("should stop adding call cost if the critical level is reached", function () {  
@@ -205,7 +205,7 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
-        assert.equal(settingsBill.classColor(),"red");
+        assert.equal(settingsBill.classColor(),"danger");
         assert.equal(settingsBill.getTotalCallCost(),10);
 
     });
@@ -222,11 +222,11 @@ describe("The warning and critical level function", function () {
         settingsBill.makeCall();
         settingsBill.makeCall();
         settingsBill.makeCall();
-        assert.equal(settingsBill.classColor(),"red");
+        assert.equal(settingsBill.classColor(),"danger");
         assert.equal(settingsBill.getTotalCallCost(),10);
 
         settingsBill.setCritical(20)
-        assert.equal(settingsBill.classColor(),"orange");
+        assert.equal(settingsBill.classColor(),"warning");
         settingsBill.makeCall();
         settingsBill.makeCall();
         assert.equal(settingsBill.getTotalCallCost(),15);

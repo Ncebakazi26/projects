@@ -19,10 +19,10 @@ function calculateCallandSms(stringPassed){
     }
     function showColor(){
         if(getTotalcalcalculated()>=20 && getTotalcalcalculated() < 30){
-            return "Orange";
+            return "warning";
         }
         if(getTotalcalcalculated()>=30){
-            return "Red";
+            return "danger";
         }
 
     }
