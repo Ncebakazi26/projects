@@ -1,0 +1,48 @@
+body{
+background-color: blue;
+}
+.container{
+font-weight: bold;
+
+}
+.name{
+    float:left;
+    font-size: 40px;
+}
+.image{
+padding-left:800px;
+}
+.Frontlinks{
+    display: flex;
+}
+.image1{
+    padding-right: 10px;
+}
+.image2{
+    padding-left: 30px;
+}
+.image3 img{
+    padding-left:30px;
+}
+.navbar-toggler{
+    border: none;
+    padding: 10px 6px;
+}
+.navbar-toggler span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border: 1px;
+}
+.navbar-toggler span+span{
+    margin-top: 4px;
+    width:18px;
+    margin-left: 4px;
+}
+.navbar-toggler span+span+span{
+    width:10px;
+    margin-left: 10px;
+}
+   
+
+
