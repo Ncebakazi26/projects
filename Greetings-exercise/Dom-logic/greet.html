@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=".css">
     <link rel="stylesheet" href="simple-grid.css">
 </head>
 <body>
@@ -14,28 +13,31 @@
         <h1>Please enter your name and choose a language you would like to be greeted with.</h1>
         </div>
         <div class="col-12">
-            <h3>enter your name!</h3>
-            <form>
-
-            <input type="textarea" id="Pname" name="Pname">
+            <h2 class="Name">Enter your name!</h2>
+        </div>
+        <div>
+            <form >
+                 <input id="form"  type="console.text" placeholder="name here" pattern="[a-zA--Z0-9]+" title="Please enter A-Z or 0-9" id="Pname" name="Pname">
         </form>
         </div>
-    </div>
+    
             <div class="col-12">
                 <form class="language">
                     <input type="radio" id="English" name="language" value="English">
                     <label for="Eng">English</label>
                     <input type="radio" id="isiXhosa" name="language" value="isiXhosa">
                     <label for="Xho">isiXhosa</label>
-                    <input type="radio" id="Sepedi" name="language" value="Spedi">
+                    <input type="radio" id="Sepedi" name="language" value="Sepedi">
                     <label for="Spedi">Sepedi</label><br>
                   </form>
-                  <button class="greet" type="submit">Greet!</button>
+                  <button class="greet" type="submit" form="form2" >Greet!</button>
             </div>
-            <button class="button" id="btn">Reset</button>
-            <div class="counter">Counter:</div>
+            <button class="button" id="btn"  value="submit">Reset</button>
+            <div class="counter"></div>
             
         </div>
+    </div>
+
     
 
         <script src="../Factory/greet.js" charset="utf-8"></script>

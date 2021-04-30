@@ -7,6 +7,7 @@ local=nameS;
 function getLocal(){
     return local
 }
+
 function getCounter(){
     return counter
 }
@@ -36,19 +37,26 @@ function getCounter(){
         }
         
     }
-      /*  function counterName(counter){
-            if(counter==undefined){
-                counter++;
+     function setValue(value){
+         var langue='';
+            if(value==="English"){
+                langue='English'
             }
-          
+            if(value==="isiXhosa"){
+                langue='isiXhosa'
+            }
+            if(value==="Sepedi"){
+                langue='Sepedi'
+            }
+          return langue;
 
         }
-*/
+
     return {
         language,
-        //counterName,
         getCounter,
         setLocal,
         getLocal,
+        setValue,
     }
 }

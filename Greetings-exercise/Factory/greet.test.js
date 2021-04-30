@@ -19,12 +19,19 @@ describe("The greet factory function", function () {
       let lang = greetings()
       lang.language ("Tebogo","English")
       lang.language ("Tebogo","Sepedi")
+
+     assert.equal(lang.getCounter(),1);
+    });
+    it("should increase counter by 4 when 4 people have been greeted", function () {
+      let lang = greetings()
+      lang.language ("Tebogo","English")
+      lang.language ("Ncebakazi","Sepedi")
       lang.language ("Nceba","English")
       lang.language ("Nceba","Sepedi")
       lang.language ("Vasco","English")
       lang.language ("Vasco","Sepedi")
 
-     assert.equal(lang.getCounter(),3);
+     assert.equal(lang.getCounter(),4);
     });
 
 });

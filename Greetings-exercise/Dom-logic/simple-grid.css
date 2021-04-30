@@ -306,9 +306,10 @@ padding-left: 10px;
    padding-left:20px; 
   }
 }
-#Pname{
+#form{
   height: 50px;
   width: 400px;
+  font-size: 25px;
 }
 .language{
 padding-top: 20px;
@@ -325,7 +326,9 @@ font-size: 30px;
   width:300px;  
 }
 .counter{
-  font-size: 40px;
-  padding-top: 20px;
-  padding-left: 200px;
+ font-size: 40px;
+  margin-top: 20px;
+  background-color: yellowgreen;
+  width: 280px;
+  text-align: center;
 }
