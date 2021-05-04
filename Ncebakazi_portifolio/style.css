@@ -1,17 +1,53 @@
+
 body{
-background-color: blue;
+background-image: url('images/bokeh-2072271_960_720.webp');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: auto;
+background-size: cover;
+
 }
 .container{
 font-weight: bold;
 
 }
-.name{
-    float:left;
+.qoute{
+    font-size: 80px;
+    text-align: center;
+}
+a{
+    font-size: 20px;
+}
+.about{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+li{
+    margin-left: 10px;
+    font-size:20px;
+    margin-top: 10px;
+}
+.skills{
+    padding-top: 100px;
+    
+}
+.navbar-brand{
     font-size: 40px;
 }
-.image{
-padding-left:800px;
+.name h1{
+    float:left;
+    font-size: 100px;
+    padding-top: 100px;
 }
+.image{
+padding-left:900px;
+}
+.git{
+    padding-left: 15px;
+}
+
 .Frontlinks{
     display: flex;
 }
