@@ -15,6 +15,8 @@ describe("The greet factory function", function () {
       let lang = greetings()
      assert.equal(lang.language("teBogo","Sepedi"),"Dumela Tebogo");
     });
+
+    describe("The Counter", function () {
     it("should not increment counter if the same person has been greeted", function () {
       let lang = greetings()
       lang.language ("Tebogo","English")
@@ -33,5 +35,6 @@ describe("The greet factory function", function () {
 
      assert.equal(lang.getCounter(),4);
     });
+  })
 
 });
