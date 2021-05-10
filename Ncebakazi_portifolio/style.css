@@ -12,14 +12,46 @@ font-weight: bold;
 
 }
 .qoute{
-    font-size: 80px;
-    text-align: center;
+    font-size: 50px;
+    text-align: start;
+    padding-right: 100px;
+    
 }
+.links {
+
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: inherit;
+        color: lightcoral;
+        text-align: center;
+  }
+  .header1 h2{
+      font-size: 90px;
+      padding-top: 50px;
+  }
+  .front h1{
+      text-align: center;
+      text-decoration: underline;
+  }
+  .header1 h1{
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .front{
+      text-align: center;
+      text-decoration: underline;
+  }
+  .CV{
+    text-align: center;
+    text-decoration: none;
+ }
 a{
     font-size: 20px;
 }
 .about{
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     padding-top: 20px;
     
@@ -29,10 +61,20 @@ li{
     font-size:20px;
     margin-top: 10px;
 }
-.skills{
-    padding-top: 100px;
+.skills li{
+   padding-left: 800px;
+   font-size: 25px;
     
 }
+.about-me{
+    text-align: center;
+    text-decoration: underline;
+}
+/*.qoute{
+    padding-top: 100px;
+    padding-right: 50px;
+}
+*/
 .navbar-brand{
     font-size: 40px;
 }
@@ -61,14 +103,17 @@ padding-left:900px;
     padding-left:30px;
 }
 .navbar-toggler{
+    background-color: hotpink;
     border: none;
     padding: 10px 6px;
+    outline: none;
 }
 .navbar-toggler span{
     display: block;
     width: 22px;
     height: 2px;
     border: 1px;
+    background: aliceblue;
 }
 .navbar-toggler span+span{
     margin-top: 4px;
@@ -78,6 +123,15 @@ padding-left:900px;
 .navbar-toggler span+span+span{
     width:10px;
     margin-left: 10px;
+}
+.nav-link:hover {
+    background-color: lightgoldenrodyellow;
+
+}
+@media(max-width:640px){
+.image{
+  float:right;  
+
 }
    
 
