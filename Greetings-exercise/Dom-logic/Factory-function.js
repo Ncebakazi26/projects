@@ -36,15 +36,16 @@ function greetings(existingNames) {
     }
 
     function errorMessages(placeholder, radio) {
-        if (placeholder === '' && radio === undefined) {
+        if (placeholder === '') {
+            return "Please enter your name"
+        }
+        else if (placeholder === '' && radio === undefined) {
             return "Please enter your name and choose language"
         }
         else if (radio === undefined) {
             return "Please choose a language first"
         }
-        else if (placeholder === '' && radio!==undefined) {
-            return "Please enter your name"
-        }
+       
 
     }
 

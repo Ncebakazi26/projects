@@ -37,8 +37,20 @@ describe("The greetigs factory function", function () {
   });
   it("should return a message saying enter your name and choose a language ", function () {
     let greet = greetings();
- greet.language(" "," ")
+ greet.language(" ",undefined)
 
  assert.equal(greet.errorMessages(), "Please enter your name and choose language");
+});
+it("should return a message saying please choose a language first ", function () {
+  let greet = greetings();
+greet.language("Ncebakazi",undefined)
+
+assert.equal(greet.errorMessages(), "Please choose a language first");
+});
+it("should return a message saying please enter your name ", function () {
+  let greet = greetings();
+greet.language("","English")
+
+assert.equal(greet.errorMessages(), "Please enter your name");
 });
 });
