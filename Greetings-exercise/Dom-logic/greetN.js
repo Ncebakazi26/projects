@@ -11,46 +11,52 @@ var displayName = document.querySelector(".Name")
 //retrive names from local storaqge
 //if(greetInstance.getNames()!==undefined){
 
-
+var nameList;
 //}
-var greetInstance = greetings()
-localStorage['info'] = greetInstance.counter()
-if (localStorage['info']) {
-    counter = localStorage['info']
-    displayCount.innerHTML = counter
+if (localStorage['nameGreeted']) {
+    nameList = JSON.parse(localStorage.getItem('nameGreeted'))
 }
+
+var greetInstance = greetings(nameList)
+
+displayCount.innerHTML = greetInstance.counter()
+
 function textclear() {
     formElem.value = ""
 }
 function submitform() {
+    var radio = document.querySelector(".lang:checked")
     var nameTxt = formElem.value
 
-    var radio = document.querySelector("input[name='language']:checked")
-    alert(radio)
     if (radio) {
         var language = radio.value
-        var nameTxt = formElem.value
+
+    }
         if (nameTxt && language) {
             greetInstance.setName(nameTxt)
             displayName.innerHTML = greetInstance.language(nameTxt, language)
             //set names into localstorage
             localStorage.setItem('nameGreeted', JSON.stringify(greetInstance.getNames()))
-            var nameList = JSON.parse(localStorage.getItem('nameGreeted'))
-            var getCounter = Object.keys(nameList)
-            displayCount.innerHTML = getCounter.length
+            displayCount.innerHTML = greetInstance.counter()
             textclear()
-        }
-        else {
-            displayName.innerHTML = greetInstance.errorMessages(nameTxt, language)
-        }
+        }   
+     else    if( formElem.value === '' &&  language== null){
+            displayName.innerHTML= greetInstance.message3(formElem.value,radio.value)
+        }     
+  else   if( !formElem.value && radio.value == null){
+          displayName.innerHTML= greetInstance.messages1(formElem.value,language)
+     }
 
-    }
-    else {
-        displayName.innerHTML = "Please enter name and choose a l "
-    }
-
-
+   else   if( formElem.value === '' && radio.value ){
+            displayName.innerHTML= greetInstance.message2(formElem.value,language)  
+     }
+   
 }
+    //else  {
+    //   displayName.innerHTML = "Please choose a language"
+   // }
+    
+
 btnElem.addEventListener('click', submitform)
 buttonElem.addEventListener('click', function () {
     localStorage.clear()

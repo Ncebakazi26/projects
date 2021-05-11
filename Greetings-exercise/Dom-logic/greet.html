@@ -13,22 +13,22 @@
         <h1>Please enter your name and choose a language you would like to be greeted with.</h1>
         </div>
         <div class="col-12">
-            <h2 class="Name">Enter your name!</h2>
+            <h2 class="Name">Please enter you name!</h2>
         </div>
         <div>
     
-                 <input id="form"  type="console.text" placeholder="name here" pattern="[A-Za-z]+" title="Please enter A-Z" id="Pname" name="Pname">
+                 <input id="form"  type="console.text" placeholder="name here" required  pattern="[a-zA-Z]" title="Please enter A-Z" id="Pname" name="Pname">
                  <label class="counter" for="Counter">Counter</label>
        
         </div>
     
             <div class="col-12">
                 <form class="language">
-                    <input type="radio" id="English" name="language" value="English">
+                    <input type="radio" id="English"   class = "lang"name="language" value="English">
                     <label for="Eng">English</label>
-                    <input type="radio" id="isiXhosa" name="language" value="isiXhosa">
-                    <label for="Xho">isiXhosa</label>
-                    <input type="radio" id="Sepedi" name="language" value="Sepedi">
+                    <input type="radio" id="isiXhosa" class="lang" name="language" value="isiXhosa">
+                    <label for="Xho">IsiXhosa</label>
+                    <input type="radio" id="Sepedi" class="lang" name="language" value="Sepedi">
                     <label for="Spedi">Sepedi</label><br>
                   </form>
                   <button class="greet" type="submit" form="form2" >Greet!</button>

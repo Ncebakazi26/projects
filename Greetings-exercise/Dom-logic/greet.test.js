@@ -11,10 +11,17 @@ describe("The greetigs factory function", function () {
       
     assert.equal(greet.language ("Ncebakazi","isiXhosa"),"Molo Ncebakazi");
 
-    }); it("should greet a person in Sepedi", function () {
+    }); 
+    it("should greet a person in Sepedi", function () {
       let greet = greetings();
       
     assert.equal(greet.language ("Ncebakazi","Sepedi"), "Dumela Ncebakazi");
+    });
+
+    it("should change the first letter to a capital letter", function () {
+      let greet = greetings();
+      
+    assert.equal(greet.language ("ncebakazi","Sepedi"), "Dumela Ncebakazi");
     });
     
     describe("Counter", function () {
