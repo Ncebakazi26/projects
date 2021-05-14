@@ -182,15 +182,7 @@ h6 {
 .hidden-sm {
   display: none;
 }
-th,td{
-border: solid;
-border-collapse: collapse; 
-width:50%;
-}
-table{
-border-collapse: collapse;
-width: 100%;  
-}
+
 /*.historical p{
   line-height: 0.9em;
 }*/
@@ -270,7 +262,9 @@ width: 100%;
   .col-12 {
     width: 96%;
   }
-
+  .col-12 .error-message{
+    color: red;
+  }
   .hidden-sm {
     display: block;
   }
@@ -283,29 +277,9 @@ width: 100%;
   }
 }
 
-.myimg3,.myimg1,.myimg2 {
-  float: right;
-}
-.myimg1{
-padding-top: 10px;
-padding-left: 10px;
-}
-.myimg{
-  padding-top: 80px;
-}
 
-@media(max-width:800px){
-  .myimg2{
-    float:left;
-    padding-right: 10px;
-  }
-  .text{
-    padding-left: 130px;
-  }
-  .myimg3{
-   padding-left:20px; 
-  }
-}
+
+
 #form{
   height: 50px;
   width: 400px;
@@ -326,9 +300,16 @@ font-size: 30px;
   width:300px;  
 }
 .counter{
- font-size: 40px;
-  margin-top: 20px;
-  background-color: yellowgreen;
-  width: 280px;
-  text-align: center;
+  font-size: 50px;
+  color: brown;
+ 
+  
+}  
+
+.Error{
+  color: rgb(138, 18, 18);
+}
+h3{
+  font-size: 50px;
+  
 }

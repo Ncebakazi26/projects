@@ -1,9 +1,10 @@
 function greetings(existingNames) {
-    var required = /[A-Za-z]/
+    var regex = /[0-9]/;
+
     var greetObj = existingNames || {}
 
     function setName(name) {
-        if (name.match(required)) {
+        if (!name.match(regex)) {
             name = name.charAt(0).toUpperCase() + name.slice(1);
             if (greetObj[name] === undefined) {
                 greetObj[name] = 0;
@@ -15,7 +16,13 @@ function greetings(existingNames) {
     }
 
     function language(name, language) {
-        if (name.match(required)) {
+
+        if(name.match(regex)){
+             console.log(regex)
+            return  "Please enter letters only"
+        }
+        else  {
+            // console.log(name)
             name = name.charAt(0).toUpperCase() + name.slice(1);
             setName(name)
             if (language === 'English') {
@@ -30,36 +37,40 @@ function greetings(existingNames) {
                 return "Dumela " + name;
 
             }
+            
         }
-        else {
-            return "Please enter A-Z/ a-z"
-        }
+
+        
+       
     }
 
     function counter() {
         var getCounter = Object.keys(greetObj)
         return getCounter.length
     }
+    // function validate(){
+    //     return  "Please enter A-Z/ a-z"
+    // }
 
     function messages1(name, language) {
-
-        if (name !== '' && language == null ) {
-            console.log(name)
-
-            return "Please choose a language first"   
+//console.log(name)
+        if (name !== "" && language===undefined ) {
+            
+        return "Please choose a language"   
         }
     
     }
     function message2(name, langauge) {
 
-        if (name == '' && langauge) {
+        if (name == "" && langauge) {
             return "Please enter your name first" 
         }
     
     }
     function message3(name, langauge) {
-        if (name === '' && langauge == null) {
-            console.log('fdfdfd')
+        
+        if (name == "" &&langauge===undefined) {
+          
         return "Please enter your name and choose language"
         }
     }
@@ -72,7 +83,8 @@ return {
     messages1,
     getNames,
     message2,
-    message3,
+    message3
+    
 }
 }
 

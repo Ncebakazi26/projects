@@ -13,13 +13,17 @@
         <h1>Please enter your name and choose a language you would like to be greeted with.</h1>
         </div>
         <div class="col-12">
-            <h2 class="Name">Please enter you name!</h2>
+            <h2 class="error-message"></h2>
         </div>
         <div>
     
-                 <input id="form"  type="console.text" placeholder="name here" required  pattern="[a-zA-Z]" title="Please enter A-Z" id="Pname" name="Pname">
-                 <label class="counter" for="Counter">Counter</label>
+                 <input id="form"  type="console.text" placeholder="name here" required  pattern="[a-zA-Z]" title="Please enter A-Z" id="Pname" name="Pname"></input>
+                 <h3>Counter: <span class="counter"></span></h3>
+                  
        
+        </div>
+        <div class="col-12">
+            <h2 class="greetName"></h2>
         </div>
     
             <div class="col-12">
@@ -34,7 +38,7 @@
                   <button class="greet" type="submit" form="form2" >Greet!</button>
             </div>
             <button class="button" id="btn"  value="submit">Reset</button>
-            <div class="counter"></div>
+            
             
         </div>
     </div>
