@@ -54,7 +54,7 @@ function submitform() {
     if(!radio && nameTxt == ""){
         setTimeout(function(){
             greetName.innerHTML = ''
-            displayName.innerHTML = "enter name and choose language";
+            displayName.innerHTML = "Please enter your name and choose language";
             displayName.classList.add('Error')
         },0)
         setTimeout(function(){
@@ -65,7 +65,7 @@ function submitform() {
     if(!radio && nameTxt){
         setTimeout(function(){
             greetName.innerHTML = ''
-            displayName.innerHTML = "Please choose language"; 
+            displayName.innerHTML = "Please choose a language"; 
             displayName.classList.add('Error')
         },0)
         setTimeout(function(){
@@ -76,7 +76,7 @@ function submitform() {
     if(nameTxt == "" ){
         setTimeout(function(){
             greetName.innerHTML = ''
-            displayName.innerHTML = "enter name first";
+            displayName.innerHTML = "Please enter your name first";
             displayName.classList.add('Error')
         },0)
         setTimeout(function(){
