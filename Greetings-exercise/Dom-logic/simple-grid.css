@@ -263,7 +263,7 @@ h6 {
     width: 96%;
   }
   .col-12 .error-message{
-    color: red;
+    /* color: red; */
   }
   .hidden-sm {
     display: block;
@@ -302,9 +302,15 @@ font-size: 30px;
 .counter{
   font-size: 50px;
   color: brown;
- 
   
-}  
+} 
+.box{
+  display: flex;
+}
+.nameText{
+  margin-top: 55px;
+  margin-right: 2%;
+} 
 
 .Error{
   color: rgb(138, 18, 18);

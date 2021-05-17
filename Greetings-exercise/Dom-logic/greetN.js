@@ -9,13 +9,14 @@ var displayCount = document.querySelector(".counter")
 var displayName = document.querySelector(".error-message")
 var greetName = document.querySelector(".greetName")
 
-//var required = /[A-Za-z]/
+var regex = /[0-9]/;
 
 //retrive names from local storaqge
 //if(greetInstance.getNames()!==undefined){
 
 var nameList;
 //}
+
 if (localStorage['nameGreeted']) {
     nameList = JSON.parse(localStorage.getItem('nameGreeted'))
 }
@@ -39,36 +40,52 @@ function submitform() {
         var language = radio.value
 
     }
-        if (nameTxt && language) {
+        if (nameTxt && language && !name.match(regex)) {
             greetInstance.setName(nameTxt)
             greetName.innerHTML = greetInstance.language(nameTxt, language)
             //set names into localstorage
             localStorage.setItem('nameGreeted', JSON.stringify(greetInstance.getNames()))
             displayCount.innerHTML = greetInstance.counter()
-            textclear()
-
-            // if(nameTxt != language && !nameTxt.match(required)){
-            //     setTimeout(function(){
-            //    displayName.classList.add('Error')
-            //  },0)
-            // }
-        }   
+            displayName.innerHTML = ""
+           
+            textclear()   
+        } 
+        
     if(!radio && nameTxt == ""){
-        displayName.innerHTML = "enter name and choose language";
-        return;
+        setTimeout(function(){
+            greetName.innerHTML = ''
+            displayName.innerHTML = "enter name and choose language";
+            displayName.classList.add('Error')
+        },0)
+        setTimeout(function(){
+            displayName.innerHTML = "";
+            textclear()
+        },3000)
     }
-    if(!radio){
-        displayName.innerHTML = "choose language"; 
-        return;
+    if(!radio && nameTxt){
+        setTimeout(function(){
+            greetName.innerHTML = ''
+            displayName.innerHTML = "Please choose language"; 
+            displayName.classList.add('Error')
+        },0)
+        setTimeout(function(){
+            displayName.innerHTML = "";             
+        },3000)
+        textclear()
     }
-    if(nameTxt == "" )
-    displayName.innerHTML = "enter name first";
-    return;
-
+    if(nameTxt == "" ){
+        setTimeout(function(){
+            greetName.innerHTML = ''
+            displayName.innerHTML = "enter name first";
+            displayName.classList.add('Error')
+        },0)
+        setTimeout(function(){
+            displayName.innerHTML = "";
+            
+        },3000)
+        textclear()
+    }
 }
-  
-    
-    
 
 btnElem.addEventListener('click', submitform)
 buttonElem.addEventListener('click', function () {

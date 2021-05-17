@@ -18,8 +18,8 @@ function greetings(existingNames) {
     function language(name, language) {
 
         if(name.match(regex)){
-             console.log(regex)
             return  "Please enter letters only"
+            
         }
         else  {
             // console.log(name)
